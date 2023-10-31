@@ -1,0 +1,64 @@
+﻿body {
+    background-color: #9aede5; /* Cor de fundo da tela */
+}
+
+h1.agenda-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-bordered {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        background-color: #f5f5f5;
+    }
+
+    .table-bordered th {
+        background-color: #f2f2f2;
+    }
+
+    .table-bordered tr:hover {
+        background-color: #e0e0e0;
+    }
+
+    .table-bordered td {
+        white-space: nowrap;
+        border-radius: 5px;
+    }
+
+    .table-bordered .btn {
+        margin-right: 5px;
+    }
+
+.btn-secondary,
+.btn-sm {
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cor de fundo do botão secundário */
+}
+
+.d-flex.justify-content-start.mt-2 a.btn {
+    margin-top: 10px;
+}

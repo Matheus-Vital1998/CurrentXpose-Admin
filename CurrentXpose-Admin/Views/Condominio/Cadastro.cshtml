@@ -1,0 +1,32 @@
+﻿@model CurrentXpose_Admin.Entidades.Condominio
+
+@{
+    ViewData["Title"] = "Criar Compromisso";
+}
+
+<link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Criar Compromisso</h1>
+
+<div class="container">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="nome" class="control-label font-weight-bold">Nome</label>
+            <input asp-for="nome" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-equal">Criar</button>
+            <a class="btn btn-secondary btn-equal" asp-action="Index">Voltar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

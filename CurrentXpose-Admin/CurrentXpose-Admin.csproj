@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,8 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CurrentXpose-Admin.Domain\CurrentXpose-Admin.Domain.csproj" />
-    <ProjectReference Include="..\CurrentXpose-Admin.Infra\CurrentXpose-Admin.Infra.csproj" />
+    <Folder Include="Views\Sindico\" />
   </ItemGroup>
 
 </Project>

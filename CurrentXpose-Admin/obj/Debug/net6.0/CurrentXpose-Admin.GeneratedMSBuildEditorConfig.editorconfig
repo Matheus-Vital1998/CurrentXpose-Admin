@@ -16,12 +16,44 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Condominio/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xDYWRhc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Condominio/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Condominio/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Condominio/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xFeGNsdWlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Condominio/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xMaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Login/Inicial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5pY2lhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Morador/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9yYWRvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Predio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZGlvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Residencia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzaWRlbmNpYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FH185/Documents/Ternomecanica/Projeto interdisciplinar/CurrentXpose-Admin/CurrentXpose-Admin/Views/Shared/Error.cshtml]

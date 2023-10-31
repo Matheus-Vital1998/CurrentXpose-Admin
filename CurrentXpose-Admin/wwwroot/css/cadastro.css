@@ -1,0 +1,53 @@
+﻿body {
+    background-color: #9aede5; /* Cor de fundo da tela */
+}
+
+h1.agenda-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.control-label.font-weight-bold {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.btn-success,
+.btn-secondary {
+    color: white;
+}
+
+.btn-equal {
+    margin-right: 10px;
+}
+
+.btn-success {
+    background-color: #28a745; /* Cor de fundo do botão de sucesso */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cor de fundo do botão secundário */
+}
+
+.d-flex.justify-content-start.mt-2 a.btn {
+    margin-top: 10px;
+}

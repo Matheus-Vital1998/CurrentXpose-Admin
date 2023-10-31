@@ -46,6 +46,19 @@
           }
         }
       },
+      "Dapper/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1060,19 +1073,6 @@
             "rid": "win"
           }
         }
-      },
-      "CurrentXpose-Admin.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12"
-        },
-        "compile": {
-          "bin/placeholder/CurrentXpose-Admin.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CurrentXpose-Admin.Domain.dll": {}
-        }
       }
     }
   },
@@ -1113,6 +1113,25 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Dapper/2.1.15": {
+      "sha512": "1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
+      "type": "package",
+      "path": "dapper/2.1.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.15.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -2892,16 +2911,11 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "CurrentXpose-Admin.Domain/1.0.0": {
-      "type": "project",
-      "path": "../CurrentXpose-Admin.Domain/CurrentXpose-Admin.Domain.csproj",
-      "msbuildProject": "../CurrentXpose-Admin.Domain/CurrentXpose-Admin.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CurrentXpose-Admin.Domain >= 1.0.0",
+      "Dapper >= 2.1.15",
       "Microsoft.EntityFrameworkCore >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
@@ -2942,11 +2956,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin.Domain\\CurrentXpose-Admin.Domain.csproj": {
-              "projectPath": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin.Domain\\CurrentXpose-Admin.Domain.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2959,6 +2969,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.15, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.12, )"

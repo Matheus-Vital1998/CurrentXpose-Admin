@@ -5,6 +5,34 @@
       "PackagePath": "staticwebassets\\CurrentXpose-Admin.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\cadastro.css",
+      "PackagePath": "staticwebassets\\css\\cadastro.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\detalhes.css",
+      "PackagePath": "staticwebassets\\css\\detalhes.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\editar.css",
+      "PackagePath": "staticwebassets\\css\\editar.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\exclusao.css",
+      "PackagePath": "staticwebassets\\css\\exclusao.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\inicial.css",
+      "PackagePath": "staticwebassets\\css\\inicial.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\lista.css",
+      "PackagePath": "staticwebassets\\css\\lista.css"
+    },
+    {
+      "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\FH185\\Documents\\Ternomecanica\\Projeto interdisciplinar\\CurrentXpose-Admin\\CurrentXpose-Admin\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

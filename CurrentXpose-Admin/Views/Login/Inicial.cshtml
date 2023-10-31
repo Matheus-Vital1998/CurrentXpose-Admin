@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Inicial";
+}
+
+<link rel="stylesheet" href="~/css/inicial.css" asp-append-version="true" />
+
+<h1>Administrador</h1>
+<br />
+
+<p class="mb-2 mt-2 ml-3">Seja bem-vindo novamente! </p>
+<p class="text-danger mb-2 mt-2 ml-3">Adicione um novo condomínio, prédio, morador ou usuário!</p>
+
+<div class="container">
+    <table class="table table-bordered mt-3">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Descrição
+                </th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <b>Condomínio</b>
+                </td>
+                <td>
+                    <a class="btn btn-secondary btn-sm" asp-action="Cadastro" asp-controller="Condominio">Cadastrar</a>
+                    <a class="btn btn-info btn-sm" asp-action="Lista" asp-controller="Condominio">Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Prédio</b>
+                </td>
+                <td>
+                    <a class="btn btn-secondary btn-sm" asp-action="Index" asp-controller="Login">Cadastrar</a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="">Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Morador</b>
+                </td>
+                <td>
+                    <a class="btn btn-secondary btn-sm" asp-action="Index" asp-controller="Login">Cadastrar</a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="">Detalhes</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Residência</b>
+                </td>
+                <td>
+                    <a class="btn btn-secondary btn-sm" asp-action="Index" asp-controller="Login">Cadastrar</a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="">Detalhes</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Index" asp-controller="Login">Sair</a>
+    </div>
+</div>

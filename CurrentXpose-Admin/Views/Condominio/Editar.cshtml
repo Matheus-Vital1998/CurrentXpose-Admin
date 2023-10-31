@@ -1,0 +1,28 @@
+﻿@model CurrentXpose_Admin.Entidades.Condominio
+
+@{
+    ViewData["Title"] = "Editar Condomínio";
+}
+
+<link rel="stylesheet" href="~/css/editar.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Editar Condomínio</h1>
+
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <div class="form-group">
+            <label asp-for="nome" class="control-label font-weight-bold">Novo Nome do Condomínio</label>
+            <input asp-for="nome" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-equal">Salvar Alterações</button>
+        <a class="btn btn-secondary btn-equal" asp-action="Details" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Index">Voltar</a>
+    </div>
+</div>
