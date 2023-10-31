@@ -15,10 +15,30 @@ namespace CurrentXpose_Admin.Controllers
             _residenciaService = residenciaService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Lista()
         {
-            var residencias =  _residenciaService.ObterResidencias();
+            var residencias = await _residenciaService.ObterResidencias();
             return View(residencias);
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        public IActionResult Detalhes()
+        {
+            return View();
+        }
+
+        public IActionResult Excluir()
+        {
+            return View();
         }
     }
 }

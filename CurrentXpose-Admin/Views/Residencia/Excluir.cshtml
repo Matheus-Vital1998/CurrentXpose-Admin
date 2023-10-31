@@ -1,0 +1,24 @@
+﻿@model CurrentXpose_Admin.Entidades.Residencia
+
+@{
+    ViewData["Title"] = "Excluir Residencia";
+}
+
+<link rel="stylesheet" href="~/css/exclusao.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Excluir Residencia</h1>
+
+<div class="container">
+    <p>Você está prestes a excluir a residencia <strong>@Model.numero</strong>. Tem certeza que deseja continuar?</p>
+
+    <form asp-action="Deletar" asp-controller="Residencia" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>
+        <a class="btn btn-secondary btn-equal" asp-action="Detalhes" asp-controller="Residencia" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Residencia">Voltar</a>
+    </div>
+</div>

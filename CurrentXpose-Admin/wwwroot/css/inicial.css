@@ -23,6 +23,11 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.btn-equal {
+    font-size: 15px;
+    padding: 3px 18px;
+}
+
 .btn-primary,
 .btn-danger,
 .btn-success,

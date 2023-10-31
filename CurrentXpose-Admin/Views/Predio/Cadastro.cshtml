@@ -1,12 +1,12 @@
-﻿@model CurrentXpose_Admin.Entidades.Condominio
+﻿@model CurrentXpose_Admin.Entidades.Predio
 
 @{
-    ViewData["Title"] = "Criar Compromisso";
+    ViewData["Title"] = "Cadastrar Predio";
 }
 
 <link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
 
-<h1 class="agenda-title">Cadastrar condominio</h1>
+<h1 class="agenda-title">Cadastrar predio</h1>
 
 <div class="container">
     <form asp-action="Create">
@@ -17,7 +17,17 @@
             <input asp-for="nome" class="form-control" />
             <span asp-validation-for="nome" class="text-danger"></span>
         </div>
-
+        <div class="form-group">
+            <label asp-for="total_de_andares" class="control-label font-weight-bold">Andares</label>
+            <input asp-for="total_de_andares" class="form-control" />
+            <span asp-validation-for="total_de_andares" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="condominio" class="control-label font-weight-bold">Id Codominio</label>
+            <input asp-for="condominio" class="form-control" />
+            <span asp-validation-for="condominio" class="text-danger"></span>
+        </div>
+        
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-sm btn-equal">Criar</button>
             <a class="btn btn-secondary btn-sm btn-equal" asp-action="Index">Voltar</a>

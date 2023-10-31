@@ -14,9 +14,9 @@ namespace CurrentXpose_Admin.Controllers
         {
             _condominioService = condominioService;
         }
-        public IActionResult Lista()
+        public async Task<IActionResult> Lista()
         {
-            var condominios =  _condominioService.ObterCondominios();
+            var condominios =  await _condominioService.ObterCondominios();
             return View(condominios);
         }
 

@@ -14,10 +14,30 @@ namespace CurrentXpose_Admin.Controllers
             _moradorService = moradorService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Lista()
         {
-            var moradores =  _moradorService.ObterMoradores();
+            var moradores = await _moradorService.ObterMoradores();
             return View(moradores);
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        public IActionResult Detalhes()
+        {
+            return View();
+        }
+
+        public IActionResult Excluir()
+        {
+            return View();
         }
     }
 }

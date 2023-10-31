@@ -1,12 +1,12 @@
-﻿@model IEnumerable<CurrentXpose_Admin.Entidades.Condominio>
+﻿@model IEnumerable<CurrentXpose_Admin.Entidades.Predio>
 
 @{
-    ViewData["Title"] = "Lista de Condomínios";
+    ViewData["Title"] = "Lista de Predios";
 }
 
 <link rel="stylesheet" href="~/css/lista.css" asp-append-version="true" />
 
-<h1 class="agenda-title">Lista de Condomínios</h1>
+<h1 class="agenda-title">Lista de Predios</h1>
 
 <div class="container">
     <table class="table table-bordered mt-3">
@@ -22,9 +22,9 @@
                 <tr>
                     <td>@condominio.nome</td>
                     <td>
-                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Condominio" asp-route-id="@condominio.id">Detalhes</a>
-                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Condominio" asp-route-id="@condominio.id">Editar</a>
-                        <a class="btn btn-info btn-sm" asp-action="Excluir" asp-controller="Condominio" asp-route-id="@condominio.id">Excluir</a>
+                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Predio" asp-route-id="@condominio.id">Detalhes</a>
+                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Predio" asp-route-id="@condominio.id">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Excluir" asp-controller="Predio" asp-route-id="@condominio.id">Excluir</a>
                     </td>
                 </tr>
             }

@@ -1,0 +1,38 @@
+﻿@model CurrentXpose_Admin.Entidades.Residencia
+
+@{
+    ViewData["Title"] = "Editar Residencia";
+}
+
+<link rel="stylesheet" href="~/css/editar.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Editar Residencia</h1>
+
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <div class="form-group">
+            <label asp-for="numero" class="control-label font-weight-bold">Novo numero da residencia</label>
+            <input asp-for="numero" class="form-control" />
+            <span asp-validation-for="numero" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="andar" class="control-label font-weight-bold">Novo andar da residencia</label>
+            <input asp-for="andar" class="form-control" />
+            <span asp-validation-for="andar" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="predio" class="control-label font-weight-bold">Novo Id do predio</label>
+            <input asp-for="predio" class="form-control" />
+            <span asp-validation-for="predio" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-equal">Salvar Alterações</button>
+        <a class="btn btn-secondary btn-equal" asp-action="Destalhes" asp-controller="Residencia" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Residencia">Voltar</a>
+    </div>
+</div>

@@ -1,4 +1,8 @@
 using CurrentXpose_Admin.Context;
+using CurrentXpose_Admin.Repository.Interfaces;
+using CurrentXpose_Admin.Repository;
+using CurrentXpose_Admin.Services.Interfaces;
+using CurrentXpose_Admin.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +13,19 @@ builder.Services.AddDbContext<CurrentXposeAdminContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IMoradorService, MoradorService>();
+builder.Services.AddScoped<ICondominioService, CondominioService>();
+builder.Services.AddScoped<IPredioService, PredioService>();
+builder.Services.AddScoped<IResidenciaService, ResidenciaService>();
+builder.Services.AddScoped<ISindicoService, SindicoService>();
+
+// Add repositories
+builder.Services.AddScoped<IMoradorRepository, MoradorRepository>();
+builder.Services.AddScoped<ICondominioRepository, CondominioRepository>();
+builder.Services.AddScoped<IPredioRepository, PredioRepository>();
+builder.Services.AddScoped<IResidenciaRepository, ResidenciaRepository>();
+builder.Services.AddScoped<ISindicoRepository, SindicoRepository>();
 
 var app = builder.Build();
 

@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #9aede5; /* Cor de fundo da tela */
+    background-color: #9aede5;
 }
 
 h1.agenda-title {
@@ -8,11 +8,8 @@ h1.agenda-title {
 }
 
 .container {
-    max-width: 900px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 700px;
+    margin: 50px auto 60px auto;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
@@ -34,18 +31,20 @@ h1.agenda-title {
 .btn-success,
 .btn-secondary {
     color: white;
-}
-
-.btn-equal {
     margin-right: 10px;
 }
 
 .btn-success {
-    background-color: #28a745; /* Cor de fundo do botão de sucesso */
+    background-color: #28a745;
 }
 
 .btn-secondary {
-    background-color: #6c757d; /* Cor de fundo do botão secundário */
+    background-color: #6c757d;
+}
+
+.btn-sm {
+    font-size: 15px;
+    padding: 5px 10px;
 }
 
 .d-flex.justify-content-start.mt-2 a.btn {

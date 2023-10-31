@@ -1,0 +1,24 @@
+﻿@model CurrentXpose_Admin.Entidades.Predio
+
+@{
+    ViewData["Title"] = "Excluir Predio";
+}
+
+<link rel="stylesheet" href="~/css/exclusao.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Excluir Predio</h1>
+
+<div class="container">
+    <p>Você está prestes a excluir o predio <strong>@Model.nome</strong>. Tem certeza que deseja continuar?</p>
+
+    <form asp-action="Excluir" asp-controller="Predio" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>
+        <a class="btn btn-secondary btn-equal" asp-action="Detalhes" asp-controller="Predio" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Predio">Voltar</a>
+    </div>
+</div>

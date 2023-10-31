@@ -15,10 +15,30 @@ namespace CurrentXpose_Admin.Controllers
             _predioService = predioService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Lista()
         {
-            var predios =  _predioService.ObterPredios();
+            var predios = await _predioService.ObterPredios();
             return View(predios);
+        }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        public IActionResult Detalhes()
+        {
+            return View();
+        }
+
+        public IActionResult Excluir()
+        {
+            return View();
         }
     }
 }
