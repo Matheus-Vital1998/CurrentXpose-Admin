@@ -1,0 +1,8 @@
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.csproj.AssemblyReference.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.AssemblyInfoInputs.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.AssemblyInfo.cs
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.csproj.CoreCompileInputs.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.RazorAssemblyInfo.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Release\net6.0\CurrentXpose-Admin.RazorAssemblyInfo.cs

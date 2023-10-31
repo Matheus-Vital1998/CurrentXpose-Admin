@@ -1,4 +1,11 @@
+using CurrentXpose_Admin.Infra.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CurrentXposeAdminContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CurrentXpose"),
+    builder => builder.MigrationsAssembly(typeof(CurrentXposeAdminContext).Assembly.FullName)));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

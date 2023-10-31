@@ -1,0 +1,15 @@
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\bin\Debug\net6.0\CurrentXpose-Admin.Infra.deps.json
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\bin\Debug\net6.0\CurrentXpose-Admin.Infra.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\bin\Debug\net6.0\CurrentXpose-Admin.Infra.pdb
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\bin\Debug\net6.0\CurrentXpose-Admin.Domain.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\bin\Debug\net6.0\CurrentXpose-Admin.Domain.pdb
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.csproj.AssemblyReference.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.AssemblyInfoInputs.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.AssemblyInfo.cs
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.csproj.CoreCompileInputs.cache
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.csproj.CopyComplete
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\refint\CurrentXpose-Admin.Infra.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\CurrentXpose-Admin.Infra.pdb
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin.Infra\obj\Debug\net6.0\ref\CurrentXpose-Admin.Infra.dll
