@@ -3,6 +3,8 @@ using CurrentXpose_Admin.Repository.Interfaces;
 using CurrentXpose_Admin.Context;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using static Azure.Core.HttpHeader;
 
 namespace CurrentXpose_Admin.Repository
 {
@@ -15,14 +17,13 @@ namespace CurrentXpose_Admin.Repository
             using (var conn = _context.Database.GetDbConnection())
             {
                 conn.Open();
-                var sql = $@"select
-                                dbo.Predio.id,
-                                dbo.Predio.nome,
-                                dbo.Predio.total_de_andares,
-                                dbo.Condominio.nome
-                            from dbo.Predio
-                            INNER JOIN dbo.Condominio on dbo.Predio.condominio = dbo.Condominio.id
-                            order by nome";
+                var sql = $@"SELECT
+                        dbo.Predio.id,
+                        dbo.Predio.nome AS NomePredio,
+                        dbo.Predio.total_de_andares,
+                        dbo.Predio.condominio_id
+                    FROM dbo.Predio
+                    ORDER BY NomePredio";
 
                 var result = await conn.QueryAsync<Predio>(sql);
                 conn.Close();

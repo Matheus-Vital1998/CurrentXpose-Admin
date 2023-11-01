@@ -26,9 +26,33 @@ namespace CurrentXpose_Admin.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Cadastro(Predio novoPredio)
+        {
+            if (ModelState.IsValid)
+            {
+                await _predioService.InserirPredio(novoPredio);
+                return RedirectToAction(nameof(Lista));
+            }
+
+            return View(novoPredio);
+        }
+
         public IActionResult Editar()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(Predio predioEditado)
+        {
+            if (ModelState.IsValid)
+            {
+                await _predioService.AtualizarPredio(predioEditado);
+                return RedirectToAction(nameof(Lista));
+            }
+
+            return View(predioEditado);
         }
 
         public IActionResult Detalhes()
@@ -39,6 +63,13 @@ namespace CurrentXpose_Admin.Controllers
         public IActionResult Excluir()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Excluir(int predioId)
+        {
+            await _predioService.ExcluirPredio(predioId);
+            return RedirectToAction(nameof(Lista));
         }
     }
 }

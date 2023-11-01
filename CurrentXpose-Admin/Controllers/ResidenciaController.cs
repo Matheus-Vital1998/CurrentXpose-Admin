@@ -26,19 +26,41 @@ namespace CurrentXpose_Admin.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Cadastro(Residencia novaResidencia)
+        {
+            await _residenciaService.InserirResidencia(novaResidencia);
+            return RedirectToAction(nameof(Lista));
+        }
+
         public IActionResult Editar()
         {
             return View();
         }
 
-        public IActionResult Detalhes()
+        [HttpPost]
+        public async Task<IActionResult> Editar(Residencia residenciaEditada)
         {
-            return View();
+            await _residenciaService.AtualizarResidencia(residenciaEditada);
+            return RedirectToAction(nameof(Lista));
+        }
+
+        public async Task<IActionResult> Detalhes(int residenciaId)
+        {
+            var residencia = await _residenciaService.DetalhesResidencia(residenciaId);
+            return View(residencia);
         }
 
         public IActionResult Excluir()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Excluir(int residenciaId)
+        {
+            await _residenciaService.ExcluirResidencia(residenciaId);
+            return RedirectToAction(nameof(Lista));
         }
     }
 }
