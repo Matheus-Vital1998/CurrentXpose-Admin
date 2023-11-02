@@ -9,9 +9,9 @@
 <h1 class="agenda-title">Excluir Predio</h1>
 
 <div class="container">
-    <p>Você está prestes a excluir o predio <strong>@Model.nome</strong>. Tem certeza que deseja continuar?</p>
+    <p>Você está prestes a excluir o predio @Model.nome. Tem certeza que deseja continuar?</p>
 
-    <form asp-action="Excluir" asp-controller="Predio" method="post">
+    <form asp-action="Deletar" asp-controller="Predio" method="post">
         <input type="hidden" asp-for="id" />
 
         <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>
