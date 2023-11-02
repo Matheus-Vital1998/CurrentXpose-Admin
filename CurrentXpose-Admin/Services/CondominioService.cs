@@ -22,7 +22,7 @@ namespace CurrentXpose_Admin.Services
 
         public async Task InserirCondominio(Condominio condominio)
         {
-             await _condominioRepository.InsertAsync(condominio);
+             await _condominioRepository.Insert(condominio);
         }
 
         public async Task AtualizarCondominio(Condominio condominio)

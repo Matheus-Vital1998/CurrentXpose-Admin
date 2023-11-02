@@ -17,14 +17,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var condominio in Model)
+            @foreach (var predios in Model)
             {
                 <tr>
-                    <td>@condominio.nome</td>
+                    <td>@predios.nome</td>
                     <td>
-                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Predio" asp-route-id="@condominio.id">Detalhes</a>
-                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Predio" asp-route-id="@condominio.id">Editar</a>
-                        <a class="btn btn-info btn-sm" asp-action="Excluir" asp-controller="Predio" asp-route-id="@condominio.id">Excluir</a>
+                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Predio" asp-route-id="@predios.id">Detalhes</a>
+                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Predio" asp-route-id="@predios.id">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Deletar" asp-controller="Predio" asp-route-id="@predios.id">Excluir</a>
                     </td>
                 </tr>
             }

@@ -8,7 +8,7 @@ using static Azure.Core.HttpHeader;
 
 namespace CurrentXpose_Admin.Repository
 {
-    public class PredioRepository : BaseRepository<Predio> , IPredioRepository
+    public class PredioRepository : BaseRepository<Predio>, IPredioRepository
     {
         public PredioRepository(CurrentXposeAdminContext context) : base(context) { }
 
@@ -19,11 +19,11 @@ namespace CurrentXpose_Admin.Repository
                 conn.Open();
                 var sql = $@"SELECT
                         dbo.Predio.id,
-                        dbo.Predio.nome AS NomePredio,
+                        dbo.Predio.nome,
                         dbo.Predio.total_de_andares,
                         dbo.Predio.condominio_id
                     FROM dbo.Predio
-                    ORDER BY NomePredio";
+                    ORDER BY nome";
 
                 var result = await conn.QueryAsync<Predio>(sql);
                 conn.Close();
@@ -37,14 +37,14 @@ namespace CurrentXpose_Admin.Repository
             {
                 conn.Open();
 
-                var sql = @"INSERT INTO dbo.Predio (nome, total_de_andares, condominio)
+                var sql = @"INSERT INTO dbo.Predio (nome, total_de_andares, condominio_id)
                     VALUES (@Nome, @TotalDeAndares, @CondominioId)";
 
                 await conn.ExecuteAsync(sql, new
                 {
                     Nome = predio.nome,
                     TotalDeAndares = predio.total_de_andares,
-                    CondominioId = predio.condominio
+                    CondominioId = predio.condominio.id
                 });
 
                 conn.Close();
@@ -58,16 +58,16 @@ namespace CurrentXpose_Admin.Repository
                 conn.Open();
 
                 var sql = @"UPDATE dbo.Predio
-                    SET nome = @Nome,
-                        total_de_andares = @TotalDeAndares,
-                        condominio = @CondominioId
-                    WHERE id = @PredioId";
+                                SET nome = @Nome,
+                                    total_de_andares = @TotalDeAndares,
+                                    condominio_id = @CondominioId
+                                WHERE id = @PredioId";
 
                 await conn.ExecuteAsync(sql, new
                 {
                     Nome = predio.nome,
                     TotalDeAndares = predio.total_de_andares,
-                    CondominioId = predio.condominio,
+                    CondominioId = predio.condominio.id,
                     PredioId = predio.id
                 });
 
@@ -100,7 +100,7 @@ namespace CurrentXpose_Admin.Repository
                         dbo.Predio.id,
                         dbo.Predio.nome,
                         dbo.Predio.total_de_andares,
-                        dbo.Predio.condominio
+                        dbo.Predio.condominio_id
                     FROM dbo.Predio
                     WHERE dbo.Predio.id = @PredioId";
 

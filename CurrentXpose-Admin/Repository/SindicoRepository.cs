@@ -20,10 +20,8 @@ namespace CurrentXpose_Admin.Repository
                                 dbo.Sindico.nome,
                                 dbo.Sindico.login,
                                 dbo.Sindico.senha,
-                                dbo.Condominio.nome,
-                                nivel_relatorio
+                                dbo.Sindico.nivel_relatorio
                             from dbo.Sindico
-                            INNER JOIN dbo.Condominio on dbo.Sindico.condominio = dbo.Condominio.id
                             order by nome";
 
                 var result = await conn.QueryAsync<Sindico>(sql);
@@ -32,21 +30,26 @@ namespace CurrentXpose_Admin.Repository
             }
         }
 
-        public async Task<int> Insert(Sindico sindico)
+        public async Task Insert(Sindico sindico)
         {
             using (var conn = _context.Database.GetDbConnection())
             {
                 conn.Open();
 
-                var sql = $@"INSERT INTO dbo.Sindico (nome, login, senha, condominio, nivel_relatorio)
-                     VALUES (@Nome, @Login, @Senha, @Condominio, @NivelRelatorio);
-                     SELECT CAST(SCOPE_IDENTITY() as int)";
+                var sql = @"INSERT INTO dbo.Sindico (nome, login, senha, condominio_id, nivel_relatorio) 
+                    VALUES (@Nome, @Login, @Senha, @Condominio, @Relatorio)";
 
-                var sindicoId = await conn.QueryFirstOrDefaultAsync<int>(sql, sindico);
+                var parameters = new
+                {
+                    Nome = sindico.nome,
+                    Login = sindico.login,
+                    Senha = sindico.senha,
+                    Condominio = sindico.condominio.id,
+                    Relatorio = sindico.nivel_relatorio
+                };
 
+                var result = await conn.ExecuteAsync(sql, parameters);
                 conn.Close();
-
-                return sindicoId;
             }
         }
 

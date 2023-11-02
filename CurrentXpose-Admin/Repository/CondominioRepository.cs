@@ -80,7 +80,7 @@ namespace CurrentXpose_Admin.Repository
 
                 var sql = "SELECT id, nome FROM dbo.Condominio WHERE id = @CondominioId";
 
-                var result = await conn.QuerySingleOrDefaultAsync<Condominio>(sql, new { CondominioId = condominioId });
+                var result = await conn.QueryFirstOrDefaultAsync<Condominio>(sql, new { CondominioId = condominioId });
 
                 conn.Close();
 

@@ -14,6 +14,8 @@ builder.Services.AddDbContext<CurrentXposeAdminContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<CurrentXposeAdminContext>();
+
 builder.Services.AddScoped<IMoradorService, MoradorService>();
 builder.Services.AddScoped<ICondominioService, CondominioService>();
 builder.Services.AddScoped<IPredioService, PredioService>();
@@ -21,6 +23,7 @@ builder.Services.AddScoped<IResidenciaService, ResidenciaService>();
 builder.Services.AddScoped<ISindicoService, SindicoService>();
 
 // Add repositories
+builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped<IMoradorRepository, MoradorRepository>();
 builder.Services.AddScoped<ICondominioRepository, CondominioRepository>();
 builder.Services.AddScoped<IPredioRepository, PredioRepository>();

@@ -29,13 +29,8 @@ namespace CurrentXpose_Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastro(Sindico novoSindico)
         {
-            if (ModelState.IsValid)
-            {
-                await _sindicoService.InserirSindico(novoSindico);
-                return RedirectToAction("Lista");
-            }
-
-            return View(novoSindico);
+            await _sindicoService.InserirSindico(novoSindico);
+            return RedirectToAction("Lista");
         }
 
         public async Task<IActionResult> Editar(int id)
@@ -61,7 +56,7 @@ namespace CurrentXpose_Admin.Controllers
                     return RedirectToAction("Lista");
                 }
 
-                return BadRequest(); 
+                return BadRequest();
             }
 
             return View(sindicoEditado);
@@ -93,7 +88,7 @@ namespace CurrentXpose_Admin.Controllers
                 return RedirectToAction("Lista");
             }
 
-            return BadRequest(); 
+            return BadRequest();
         }
     }
 }

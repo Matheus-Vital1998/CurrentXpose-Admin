@@ -51,13 +51,14 @@ namespace CurrentXpose_Admin.Controllers
             return View(morador);
         }
 
-        public IActionResult Excluir()
+        public async Task<IActionResult> Excluir(int id)
         {
-            return View();
+            var morador = await _moradorService.DetalhesMorador(id);
+            return View(morador);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Excluir(int id)
+        public async Task<IActionResult> Deletar(int id)
         {
             await _moradorService.ExcluirMorador(id);
             return RedirectToAction("Lista");

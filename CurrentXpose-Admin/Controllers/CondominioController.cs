@@ -52,9 +52,10 @@ namespace CurrentXpose_Admin.Controllers
             return View(condominio);
         }
 
-        public IActionResult Excluir()
+        public async Task <IActionResult> Deletar(int condominioId)
         {
-            return View();
+            var condominio = await _condominioService.DetalhesCondominio(condominioId);
+            return View(condominio);
         }
 
         [HttpPost]

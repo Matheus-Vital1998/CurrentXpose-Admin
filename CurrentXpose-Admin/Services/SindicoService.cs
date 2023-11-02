@@ -19,9 +19,9 @@ namespace CurrentXpose_Admin.Services.Interfaces
             return await _sindicoRepository.GetAll();
         }
 
-        public async Task<int> InserirSindico(Sindico novoSindico)
+        public async Task InserirSindico(Sindico novoSindico)
         {
-            return await _sindicoRepository.Insert(novoSindico);
+            await _sindicoRepository.Insert(novoSindico);
         }
 
         public async Task<bool> AtualizarSindico(Sindico sindicoEditado)

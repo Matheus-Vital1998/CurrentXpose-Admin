@@ -29,40 +29,34 @@ namespace CurrentXpose_Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Cadastro(Predio novoPredio)
         {
-            if (ModelState.IsValid)
-            {
-                await _predioService.InserirPredio(novoPredio);
-                return RedirectToAction(nameof(Lista));
-            }
-
-            return View(novoPredio);
+            await _predioService.InserirPredio(novoPredio);
+            return RedirectToAction(nameof(Lista));
         }
 
-        public IActionResult Editar()
+        public async Task<IActionResult> Editar(int id)
         {
-            return View();
+            var predios = await _predioService.DetalhesPredio(id);
+            return View(predios);
         }
 
         [HttpPost]
         public async Task<IActionResult> Editar(Predio predioEditado)
         {
-            if (ModelState.IsValid)
-            {
-                await _predioService.AtualizarPredio(predioEditado);
-                return RedirectToAction(nameof(Lista));
-            }
+            await _predioService.AtualizarPredio(predioEditado);
+            return RedirectToAction(nameof(Lista));
 
-            return View(predioEditado);
         }
 
-        public IActionResult Detalhes()
+        public async Task <IActionResult> Detalhes(int id)
         {
-            return View();
+            var predios = await _predioService.DetalhesPredio(id);
+            return View(predios);
         }
 
-        public IActionResult Excluir()
+        public async Task <IActionResult> Deletar(int predioId)
         {
-            return View();
+            var predios = await _predioService.DetalhesPredio(predioId);
+            return View(predios);
         }
 
         [HttpPost]

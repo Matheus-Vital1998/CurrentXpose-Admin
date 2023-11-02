@@ -9,7 +9,7 @@
 <h1 class="agenda-title">Editar Condomínio</h1>
 
 <div class="container">
-    <form asp-action="Edit" method="post">
+    <form asp-action="Editar" asp-controller="Condominio" method="post">
         <input type="hidden" asp-for="id" />
 
         <div class="form-group">
@@ -19,10 +19,10 @@
         </div>
 
         <button type="submit" class="btn btn-primary btn-equal">Salvar Alterações</button>
-        <a class="btn btn-secondary btn-equal" asp-action="Details" asp-route-id="@Model.id">Cancelar</a>
+        <a class="btn btn-info btn-equal" asp-action="Detalhes" asp-controller="Condominio" asp-route-id="@Model.id">Cancelar</a>
     </form>
 
     <div class="d-flex justify-content-start mt-2">
-        <a class="btn btn-secondary btn-sm" asp-action="Index">Voltar</a>
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Condominio">Voltar</a>
     </div>
 </div>

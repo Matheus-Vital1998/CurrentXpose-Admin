@@ -18,15 +18,9 @@ namespace CurrentXpose_Admin.Repository
                 var sql = $@"select
                                 dbo.Residencia.id,
                                 dbo.Residencia.numero,
-                                dbo.Residencia.andar,
-                                dbo.Predio.id,
-                                dbo.Predio.nome,
-                                dbo.Predio.total_de_andares,
-                                dbo.Condominio.nome
+                                dbo.Residencia.andar
                             from dbo.Residencia
-                            INNER JOIN dbo.Predio on dbo.Residencia.predio = dbo.Predio.id,
-                            INNER JOIN dbo.Condominio on dbo.Predio.condominio = dbo.Condominio.id
-                            order by nome";
+                            order by numero";
 
                 var result = await conn.QueryAsync<Residencia>(sql);
                 conn.Close();
@@ -41,14 +35,14 @@ namespace CurrentXpose_Admin.Repository
             {
                 conn.Open();
 
-                var sql = $@"INSERT INTO dbo.Residencia (numero, andar, predio)
+                var sql = $@"INSERT INTO dbo.Residencia (numero, andar, predio_id)
                      VALUES (@Numero, @Andar, @PredioId)";
 
                 await conn.ExecuteAsync(sql, new
                 {
                     Numero = residencia.numero,
                     Andar = residencia.andar,
-                    PredioId = residencia.predio
+                    PredioId = residencia.predio.id
                 });
 
                 conn.Close();

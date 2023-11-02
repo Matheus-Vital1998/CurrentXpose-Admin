@@ -30,7 +30,7 @@ namespace CurrentXpose_Admin.Controllers
         public async Task<IActionResult> Cadastro(Residencia novaResidencia)
         {
             await _residenciaService.InserirResidencia(novaResidencia);
-            return RedirectToAction(nameof(Lista));
+            return RedirectToAction("Lista");
         }
 
         public IActionResult Editar()

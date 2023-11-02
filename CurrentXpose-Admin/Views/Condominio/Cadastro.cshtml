@@ -9,7 +9,7 @@
 <h1 class="agenda-title">Cadastrar condominio</h1>
 
 <div class="container">
-    <form asp-action="Create">
+    <form asp-action="Cadastro" asp-controller="Condominio" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="form-group">
@@ -20,7 +20,7 @@
 
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-sm btn-equal">Criar</button>
-            <a class="btn btn-secondary btn-sm btn-equal" asp-action="Index">Voltar</a>
+            <a class="btn btn-secondary btn-sm btn-equal" asp-action="Inicial" asp-controller="Login">Voltar</a>
         </div>
     </form>
 </div>
