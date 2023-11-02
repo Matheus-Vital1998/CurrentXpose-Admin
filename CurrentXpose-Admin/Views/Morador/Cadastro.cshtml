@@ -1,0 +1,57 @@
+﻿@model CurrentXpose_Admin.Entidades.Morador
+
+@{
+    ViewData["Title"] = "Criar morador";
+}
+
+<link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Cadastrar morador</h1>
+
+<div class="container">
+    <form asp-action="Cadastro" asp-controller="Morador" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="nome" class="control-label font-weight-bold">Nome</label>
+            <input asp-for="nome" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+         <div class="form-group">
+            <label asp-for="login" class="control-label font-weight-bold">Login</label>
+            <input asp-for="login" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="senha" class="control-label font-weight-bold">Senha</label>
+            <input asp-for="senha" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="pergunta" class="control-label font-weight-bold">Pergunta de segurança</label>
+            <input asp-for="pergunta" class="form-control" />
+            <span asp-validation-for="pergunta" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="resposta" class="control-label font-weight-bold">Resposta de segurança</label>
+            <input asp-for="resposta" class="form-control" />
+            <span asp-validation-for="resposta" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="residencia.id" class="control-label font-weight-bold">Id Residencia</label>
+            <input asp-for="residencia.id" class="form-control" />
+            <span asp-validation-for="residencia.id" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-sm btn-equal">Criar</button>
+            <a class="btn btn-secondary btn-sm btn-equal" asp-controller="Login" asp-action="Inicial">Voltar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

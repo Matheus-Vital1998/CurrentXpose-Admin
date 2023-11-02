@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CurrentXpose_Admin.Entidades.Residencia>
+
+@{
+    ViewData["Title"] = "Lista de Residencias";
+}
+
+<link rel="stylesheet" href="~/css/lista.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Lista de Residencias</h1>
+
+<div class="container">
+    <table class="table table-bordered mt-3">
+        <thead class="thead-light">
+            <tr>
+                <th>Numero</th>
+                <th>Andar</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var condominio in Model)
+            {
+                <tr>
+                    <td>@condominio.numero</td>
+                    <td>@condominio.andar º</td>
+
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Residencia" asp-route-id="@condominio.id">Detalhes</a>
+                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Residencia" asp-route-id="@condominio.id">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Excluir" asp-controller="Residencia" asp-route-id="@condominio.id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Inicial" asp-controller="Login">Voltar</a>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model CurrentXpose_Admin.Entidades.Morador
+
+@{
+    ViewData["Title"] = "Excluir morador";
+}
+
+<link rel="stylesheet" href="~/css/exclusao.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Excluir morador</h1>
+
+<div class="container">
+    <p>Você está prestes a excluir o morador @Model.nome. Tem certeza que deseja continuar?</p>
+
+    <form asp-action="Deletar" asp-controller="Morador" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>
+        <a class="btn btn-info btn-equal" style="color:white;" asp-controller="Morador" asp-action="Detalhes" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-controller="Morador" asp-action="Lista">Voltar</a>
+    </div>
+</div>

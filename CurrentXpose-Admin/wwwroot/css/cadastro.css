@@ -1,0 +1,52 @@
+﻿body {
+    background-color: #9aede5;
+}
+
+h1.agenda-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto 60px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.control-label.font-weight-bold {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.btn-success,
+.btn-secondary {
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-sm {
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.d-flex.justify-content-start.mt-2 a.btn {
+    margin-top: 10px;
+}

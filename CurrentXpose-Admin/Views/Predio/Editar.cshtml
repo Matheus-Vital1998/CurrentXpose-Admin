@@ -1,0 +1,38 @@
+﻿@model CurrentXpose_Admin.Entidades.Predio
+
+@{
+    ViewData["Title"] = "Editar Predio";
+}
+
+<link rel="stylesheet" href="~/css/editar.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Editar Predio</h1>
+
+<div class="container">
+    <form asp-action="Editar" asp-controller="Predio" method="post">
+        <input type="hidden" asp-for="id" />
+
+        <div class="form-group">
+            <label asp-for="nome" class="control-label font-weight-bold">Novo Nome do predio</label>
+            <input asp-for="nome" class="form-control" />
+            <span asp-validation-for="nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="total_de_andares" class="control-label font-weight-bold">Numero de Andares</label>
+            <input asp-for="total_de_andares" class="form-control" />
+            <span asp-validation-for="total_de_andares" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="condominio.id" class="control-label font-weight-bold">Novo id do condominio</label>
+            <input asp-for="condominio.id" class="form-control" />
+            <span asp-validation-for="condominio.id" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-equal">Salvar Alterações</button>
+        <a class="btn btn-info btn-equal" asp-action="Detalhes" asp-controller="Predio" asp-route-id="@Model.id">Cancelar</a>
+    </form>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Predio">Voltar</a>
+    </div>
+</div>

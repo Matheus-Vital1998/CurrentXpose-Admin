@@ -1,0 +1,42 @@
+﻿@model CurrentXpose_Admin.Entidades.Residencia
+
+@{
+    ViewData["Title"] = "Cadastrar residencia";
+}
+
+<link rel="stylesheet" href="~/css/cadastro.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Cadastrar residencia</h1>
+
+<div class="container">
+    <form asp-action="Cadastro" asp-controller="Residencia" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="numero" class="control-label font-weight-bold">Numero</label>
+            <input asp-for="numero" class="form-control" />
+            <span asp-validation-for="numero" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="andar" class="control-label font-weight-bold">Andar</label>
+            <input asp-for="andar" class="form-control" />
+            <span asp-validation-for="andar" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="predio.id" class="control-label font-weight-bold">Id Predio</label>
+            <input asp-for="predio.id" class="form-control" />
+            <span asp-validation-for="predio.id" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-sm btn-equal">Criar</button>
+            <a class="btn btn-secondary btn-sm btn-equal" asp-action="Inicial" asp-controller="Login">Voltar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

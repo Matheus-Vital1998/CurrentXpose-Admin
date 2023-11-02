@@ -1,0 +1,29 @@
+﻿@model CurrentXpose_Admin.Entidades.Residencia
+
+@{
+    ViewData["Title"] = "Detalhes da Residencia";
+}
+
+<link rel="stylesheet" href="~/css/detalhes.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Detalhes da Residencia</h1>
+
+<div class="container">
+    <dl class="row">
+        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.id</dd>
+
+        <dt class="col-sm-2">Numero</dt>
+        <dd class="col-sm-10">@Model.numero</dd>
+
+        <dt class="col-sm-2">Andar</dt>
+        <dd class="col-sm-10">@Model.andar</dd>
+
+        <dt class="col-sm-2">Predio</dt>
+        <dd class="col-sm-10">@Model.predio</dd>
+    </dl>
+
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-action="Lista" asp-controller="Residencia">Voltar</a>
+    </div>
+</div>

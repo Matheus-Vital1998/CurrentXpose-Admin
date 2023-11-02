@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CurrentXpose_Admin.Entidades.Morador>
+
+@{
+    ViewData["Title"] = "Lista de moradores";
+}
+
+<link rel="stylesheet" href="~/css/lista.css" asp-append-version="true" />
+
+<h1 class="agenda-title">Lista de moradores</h1>
+
+<div class="container">
+    <table class="table table-bordered mt-3">
+        <thead class="thead-light">
+            <tr>
+                <th>Nome</th>
+                <th>Login</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var morador in Model)
+            {
+                <tr>
+                    <td>@morador.nome</td>
+                    <td>@morador.login</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Detalhes" asp-controller="Morador" asp-route-id="@morador.id">Detalhes</a>
+                        <a class="btn btn-info btn-sm" asp-action="Editar" asp-controller="Morador" asp-route-id="@morador.id">Editar</a>
+                        <a class="btn btn-info btn-sm" asp-action="Excluir" asp-controller="Morador" asp-route-id="@morador.id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-start mt-2">
+        <a class="btn btn-secondary btn-sm" asp-controller="Login" asp-action="Inicial">Voltar</a>
+    </div>
+</div>
