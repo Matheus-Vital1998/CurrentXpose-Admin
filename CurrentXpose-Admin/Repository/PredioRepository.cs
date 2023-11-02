@@ -97,12 +97,12 @@ namespace CurrentXpose_Admin.Repository
                 conn.Open();
 
                 var sql = $@"SELECT
-                        dbo.Predio.id,
-                        dbo.Predio.nome,
-                        dbo.Predio.total_de_andares,
-                        dbo.Predio.condominio_id
+                        id,
+                        nome,
+                        total_de_andares,
+                        condominio_id
                     FROM dbo.Predio
-                    WHERE dbo.Predio.id = @PredioId";
+                    WHERE id = @PredioId";
 
                 var result = await conn.QueryFirstOrDefaultAsync<Predio>(sql, new { PredioId = predioId });
 

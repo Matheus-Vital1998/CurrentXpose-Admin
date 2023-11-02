@@ -11,7 +11,7 @@
 <div class="container">
     <p>Você está prestes a excluir a residencia <strong>@Model.numero</strong>. Tem certeza que deseja continuar?</p>
 
-    <form asp-action="Excluir" asp-controller="Residencia" method="post">
+    <form asp-action="Deletar" asp-controller="Residencia" method="post">
         <input type="hidden" asp-for="id" />
 
         <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>

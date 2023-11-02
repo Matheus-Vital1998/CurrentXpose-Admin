@@ -33,9 +33,10 @@ namespace CurrentXpose_Admin.Controllers
             return RedirectToAction("Lista");
         }
 
-        public IActionResult Editar()
+        public async Task <IActionResult> Editar(int residenciaId)
         {
-            return View();
+            var residencia = await _residenciaService.DetalhesResidencia(residenciaId);
+            return View(residencia);
         }
 
         [HttpPost]
@@ -51,13 +52,14 @@ namespace CurrentXpose_Admin.Controllers
             return View(residencia);
         }
 
-        public IActionResult Excluir()
+        public async Task <IActionResult> Excluir(int residenciaId)
         {
-            return View();
+            var residencia = await _residenciaService.DetalhesResidencia(residenciaId);
+            return View(residencia);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Excluir(int residenciaId)
+        public async Task<IActionResult> Deletar(int residenciaId)
         {
             await _residenciaService.ExcluirResidencia(residenciaId);
             return RedirectToAction(nameof(Lista));
