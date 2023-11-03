@@ -81,8 +81,7 @@ namespace CurrentXpose_Admin.Repository
             {
                 conn.Open();
 
-                var sql = @"DELETE FROM dbo.Predio
-                    WHERE id = @PredioId";
+                var sql = @"DELETE FROM dbo.Predio WHERE id = @PredioId";
 
                 await conn.ExecuteAsync(sql, new { PredioId = predioId });
 

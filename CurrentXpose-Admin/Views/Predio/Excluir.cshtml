@@ -12,7 +12,7 @@
     <p>Você está prestes a excluir o predio <strong>@Model.nome</strong>. Tem certeza que deseja continuar?</p>
 
     <form asp-action="Deletar" asp-controller="Predio" method="post">
-        <input type="hidden" value="@Model.id" />
+        <input type="hidden" asp-for="id" />
 
         <button type="submit" class="btn btn-danger btn-equal">Confirmar Exclusão</button>
     </form>
