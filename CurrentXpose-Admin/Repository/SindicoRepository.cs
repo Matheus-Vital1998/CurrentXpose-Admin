@@ -20,6 +20,7 @@ namespace CurrentXpose_Admin.Repository
                                 dbo.Sindico.nome,
                                 dbo.Sindico.login,
                                 dbo.Sindico.senha,
+                                dbo.Sindico.condominio_id,
                                 dbo.Sindico.nivel_relatorio
                             from dbo.Sindico
                             order by nome";
@@ -63,7 +64,7 @@ namespace CurrentXpose_Admin.Repository
                      SET nome = @Nome,
                          login = @Login,
                          senha = @Senha,
-                         condominio = @Condominio,
+                         condominio_id = @Condominio,
                          nivel_relatorio = @NivelRelatorio
                      WHERE id = @Id";
 

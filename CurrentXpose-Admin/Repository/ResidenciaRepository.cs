@@ -18,7 +18,8 @@ namespace CurrentXpose_Admin.Repository
                 var sql = $@"select
                                 dbo.Residencia.id,
                                 dbo.Residencia.numero,
-                                dbo.Residencia.andar
+                                dbo.Residencia.andar,
+                                dbo.Residencia.predio_id
                             from dbo.Residencia
                             order by numero";
 
@@ -65,7 +66,7 @@ namespace CurrentXpose_Admin.Repository
                 {
                     Numero = residencia.numero,
                     Andar = residencia.andar,
-                    PredioId = residencia.predio,
+                    PredioId = residencia.predio.id,
                     ResidenciaId = residencia.id
                 });
 
