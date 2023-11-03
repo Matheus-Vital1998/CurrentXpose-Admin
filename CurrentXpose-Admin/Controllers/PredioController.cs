@@ -53,16 +53,16 @@ namespace CurrentXpose_Admin.Controllers
             return View(predios);
         }
 
-        public async Task <IActionResult> Excluir(int predioId)
+        public async Task <IActionResult> Excluir(int id)
         {
-            var predios = await _predioService.DetalhesPredio(predioId);
+            var predios = await _predioService.DetalhesPredio(id);
             return View(predios);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Deletar(int predioId)
+        public async Task<IActionResult> Deletar(int id)
         {
-            await _predioService.ExcluirPredio(predioId);
+            await _predioService.ExcluirPredio(id);
             return RedirectToAction("Lista");
         }
     }

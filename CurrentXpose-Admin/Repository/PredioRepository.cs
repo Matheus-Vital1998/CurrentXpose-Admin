@@ -104,7 +104,9 @@ namespace CurrentXpose_Admin.Repository
                     FROM dbo.Predio
                     WHERE id = @PredioId";
 
-                var result = await conn.QueryFirstOrDefaultAsync<Predio>(sql, new { PredioId = predioId });
+                var parameters = new { PredioId = predioId };
+
+                var result = await conn.QueryFirstOrDefaultAsync<Predio>(sql, parameters);
 
                 conn.Close();
 

@@ -36,6 +36,8 @@ h1.agenda-title {
 
 .btn-success {
     background-color: #28a745;
+    color: white;
+    margin-right: 10px;
 }
 
 .btn-secondary {

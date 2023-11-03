@@ -29,7 +29,8 @@ h1.agenda-title {
 }
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-info {
     color: white;
     margin-right: 10px;
 }

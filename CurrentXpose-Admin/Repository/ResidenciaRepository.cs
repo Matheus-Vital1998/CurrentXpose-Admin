@@ -100,7 +100,9 @@ namespace CurrentXpose_Admin.Repository
                     FROM dbo.Residencia r
                     WHERE r.id = @ResidenciaId";
 
-                var result = await conn.QueryFirstOrDefaultAsync<Residencia>(sql, new { ResidenciaId = residenciaId });
+                var parameters = new { ResidenciaId = residenciaId };
+
+                var result = await conn.QueryFirstOrDefaultAsync<Residencia>(sql, parameters);
 
                 conn.Close();
 

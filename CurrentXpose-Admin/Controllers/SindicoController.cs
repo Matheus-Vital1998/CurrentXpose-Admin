@@ -73,22 +73,18 @@ namespace CurrentXpose_Admin.Controllers
             return View(sindico);
         }
 
-        public IActionResult Excluir(int id)
+        public async Task <IActionResult> Excluir(int id)
         {
-            return View();
+            var sindico = await _sindicoService.DetalhesSindico(id);
+            return View(sindico);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Excluir(int id, Sindico sindico)
+        public async Task<IActionResult> Deletar(int id)
         {
-            var sucesso = await _sindicoService.ExcluirSindico(id);
+            await _sindicoService.ExcluirSindico(id);
+            return RedirectToAction("Lista");
 
-            if (sucesso)
-            {
-                return RedirectToAction("Lista");
-            }
-
-            return BadRequest();
         }
     }
 }

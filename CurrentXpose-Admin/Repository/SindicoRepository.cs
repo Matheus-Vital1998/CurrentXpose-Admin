@@ -103,7 +103,7 @@ namespace CurrentXpose_Admin.Repository
                         dbo.Sindico.nome,
                         dbo.Sindico.login,
                         dbo.Sindico.senha,
-                        dbo.Sindico.condominio
+                        dbo.Sindico.condominio_id,
                         dbo.Sindico.nivel_relatorio
                     FROM dbo.Sindico
                     WHERE dbo.Sindico.id = @SindicoId";
