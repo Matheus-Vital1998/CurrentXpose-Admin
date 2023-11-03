@@ -58,7 +58,7 @@ namespace CurrentXpose_Admin.Repository
                 var sql = $@"UPDATE dbo.Residencia
                      SET numero = @Numero,
                          andar = @Andar,
-                         predio = @PredioId
+                         predio_id = @PredioId
                      WHERE id = @ResidenciaId";
 
                 await conn.ExecuteAsync(sql, new
@@ -96,11 +96,13 @@ namespace CurrentXpose_Admin.Repository
                         r.id,
                         r.numero,
                         r.andar,
-                        r.predio 
+                        r.predio_id 
                     FROM dbo.Residencia r
                     WHERE r.id = @ResidenciaId";
 
-                var result = await conn.QueryFirstOrDefaultAsync<Residencia>(sql, new { ResidenciaId = residenciaId });
+                var parameters = new { ResidenciaId = residenciaId };
+
+                var result = await conn.QueryFirstOrDefaultAsync<Residencia>(sql, parameters);
 
                 conn.Close();
 

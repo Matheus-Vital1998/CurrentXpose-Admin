@@ -17,7 +17,8 @@ h1.agenda-title {
 }
 
 .btn-danger,
-.btn-secondary {
+.btn-secondary,
+.btn-info {
     color: white;
     margin-right: 10px;
 }
@@ -28,6 +29,8 @@ h1.agenda-title {
 
 .btn-danger {
     background-color: #dc3545;
+    color: white;
+    margin-right: 10px;
 }
 
 .d-flex.justify-content-start.mt-2 a.btn {

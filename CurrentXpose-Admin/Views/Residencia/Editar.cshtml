@@ -23,13 +23,12 @@
             <span asp-validation-for="andar" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="predio" class="control-label font-weight-bold">Novo Id do predio</label>
-            <input asp-for="predio" class="form-control" />
-            <span asp-validation-for="predio" class="text-danger"></span>
+            <label asp-for="predio.id" class="control-label font-weight-bold">Novo Id do predio</label>
+            <input asp-for="predio.id" class="form-control" />
+            <span asp-validation-for="predio.id" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-equal">Salvar Alterações</button>
-        <a class="btn btn-secondary btn-equal" asp-action="Detalhes" asp-controller="Residencia" asp-route-id="@Model.id">Cancelar</a>
+        <button type="submit" class="btn btn-info btn-equal">Salvar Alterações</button>
     </form>
 
     <div class="d-flex justify-content-start mt-2">

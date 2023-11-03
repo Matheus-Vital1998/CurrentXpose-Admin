@@ -33,9 +33,10 @@ namespace CurrentXpose_Admin.Controllers
             return RedirectToAction("Lista");
         }
 
-        public IActionResult Editar()
+        public async Task <IActionResult> Editar(int id)
         {
-            return View();
+            var residencia = await _residenciaService.DetalhesResidencia(id);
+            return View(residencia);
         }
 
         [HttpPost]
@@ -45,21 +46,22 @@ namespace CurrentXpose_Admin.Controllers
             return RedirectToAction(nameof(Lista));
         }
 
-        public async Task<IActionResult> Detalhes(int residenciaId)
+        public async Task<IActionResult> Detalhes(int id)
         {
-            var residencia = await _residenciaService.DetalhesResidencia(residenciaId);
+            var residencia = await _residenciaService.DetalhesResidencia(id);
             return View(residencia);
         }
 
-        public IActionResult Excluir()
+        public async Task <IActionResult> Excluir(int id)
         {
-            return View();
+            var residencia = await _residenciaService.DetalhesResidencia(id);
+            return View(residencia);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Excluir(int residenciaId)
+        public async Task<IActionResult> Deletar(int id)
         {
-            await _residenciaService.ExcluirResidencia(residenciaId);
+            await _residenciaService.ExcluirResidencia(id);
             return RedirectToAction(nameof(Lista));
         }
     }
