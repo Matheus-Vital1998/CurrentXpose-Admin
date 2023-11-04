@@ -4,6 +4,7 @@ using CurrentXpose_Admin.Repository;
 using CurrentXpose_Admin.Services.Interfaces;
 using CurrentXpose_Admin.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,17 @@ builder.Services.AddScoped<IResidenciaRepository, ResidenciaRepository>();
 builder.Services.AddScoped<ISindicoRepository, SindicoRepository>();
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 
+//Configurando Autenticação
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Login/Index";
+        options.AccessDeniedPath = "/Login/AcessoNegado";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,15 +52,31 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Cache-Control", "no-cache, no-store, must-revalidate");
+    context.Response.Headers.Add("Pragma", "no-cache");
+    context.Response.Headers.Add("Expires", "0");
+    await next();
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Login}/{action=Index}/{id?}");
+    endpoints.MapControllers();
+});
+
+app.UseExceptionHandler("/Login/Error");
+app.UseHsts();
 
 app.Run();

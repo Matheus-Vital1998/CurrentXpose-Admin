@@ -15,29 +15,39 @@ namespace CurrentXpose_Admin.Services
         }
         public async Task<string> AutenticacaoAdmin(UsuarioViewModel usuario, ModelStateDictionary modelState)
         {
-            if (modelState.IsValid)
+            try
             {
-                var user = await _loginRepository.GetLogin(usuario.login);
+                if (modelState.IsValid)
+                {
+                    var user = await _loginRepository.GetLogin(usuario.login);
 
-                if (user == null)
-                {
-                    return "Usuário não cadastrado";
-                }
-                else if (user.senha != usuario.senha)
-                {
-                    return "Credenciais inválidas!";
+                    if (user == null)
+                    {
+                        return "Usuário não cadastrado";
+                    }
+                    else if (user.senha != usuario.senha)
+                    {
+                        return "Credenciais inválidas!";
+                    }
+                    else
+                    {
+                        return "Success";
+                    }
                 }
                 else
                 {
-                    return "Success";
+                    return modelState.Values
+                        .SelectMany(v => v.Errors)
+                        .Select(e => e.ErrorMessage)
+                        .FirstOrDefault();
                 }
             }
-            else
+
+            catch (Exception ex)
             {
-                return modelState.Values
-                    .SelectMany(v => v.Errors)
-                    .Select(e => e.ErrorMessage)
-                    .FirstOrDefault();
+                // Adicione logs de depuração
+                Console.WriteLine($"Erro na autenticação: {ex.Message}");
+                return "Erro na autenticação";
             }
         }
     }

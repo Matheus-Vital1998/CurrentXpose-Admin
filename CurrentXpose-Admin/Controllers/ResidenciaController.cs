@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CurrentXpose_Admin.Controllers
 {
+    [Authorize]
     public class ResidenciaController : Controller
     {
         private readonly IResidenciaService _residenciaService;

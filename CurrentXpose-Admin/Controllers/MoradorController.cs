@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CurrentXpose_Admin.Controllers
 {
+    [Authorize]
     public class MoradorController : Controller
     {
         private readonly IMoradorService _moradorService;
