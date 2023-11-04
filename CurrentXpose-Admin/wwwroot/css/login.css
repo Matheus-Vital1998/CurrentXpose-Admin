@@ -54,6 +54,15 @@ button {
         background-color: #45a049;
     }
 
+.alert-danger {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #721c24;
+    border-radius: .25rem;
+    color: #721c24;
+}
+
 .text-center {
     text-align: center;
     margin-top: 10px;
