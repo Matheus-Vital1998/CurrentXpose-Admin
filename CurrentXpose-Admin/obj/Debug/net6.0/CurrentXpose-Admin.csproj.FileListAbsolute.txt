@@ -86,3 +86,7 @@ C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Adm
 C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Debug\net6.0\CurrentXpose-Admin.pdb
 C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Debug\net6.0\CurrentXpose-Admin.genruntimeconfig.cache
 C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\obj\Debug\net6.0\ref\CurrentXpose-Admin.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\FH185\Documents\Ternomecanica\Projeto interdisciplinar\CurrentXpose-Admin\CurrentXpose-Admin\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
