@@ -43,7 +43,7 @@ namespace CurrentXpose_Admin.Repository
                 {
                     Numero = residencia.numero,
                     Andar = residencia.andar,
-                    PredioId = residencia.predio.id
+                    PredioId = residencia.predio_id
                 });
 
                 conn.Close();

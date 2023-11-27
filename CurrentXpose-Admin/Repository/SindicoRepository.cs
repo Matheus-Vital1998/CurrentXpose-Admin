@@ -45,7 +45,7 @@ namespace CurrentXpose_Admin.Repository
                     Nome = sindico.nome,
                     Login = sindico.login,
                     Senha = sindico.senha,
-                    Condominio = sindico.condominio.id,
+                    Condominio = sindico.condominio_id,
                     Relatorio = sindico.nivel_relatorio
                 };
 

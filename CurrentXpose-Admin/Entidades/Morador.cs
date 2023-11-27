@@ -10,6 +10,7 @@ namespace CurrentXpose_Admin.Entidades
         public string pergunta { get; set; }
         public string resposta { get; set; }
         public Residencia residencia { get; set; }
+        public int residencia_id { get; set; }
 
         public Morador() { }
     }
