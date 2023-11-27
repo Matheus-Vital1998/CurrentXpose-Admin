@@ -49,7 +49,7 @@ namespace CurrentXpose_Admin.Repository
                     Senha = novoMorador.senha,
                     Pergunta = novoMorador.pergunta,
                     Resposta = novoMorador.resposta,
-                    Residencia = novoMorador.residencia.id
+                    Residencia = novoMorador.residencia_id
                 };
 
                 var result = await conn.ExecuteAsync(sql, parameters);
@@ -89,7 +89,7 @@ namespace CurrentXpose_Admin.Repository
                     Senha = moradorEditado.senha,
                     Pergunta = moradorEditado.pergunta,
                     Resposta = moradorEditado.resposta,
-                    ResidenciaId = moradorEditado.residencia.id,
+                    ResidenciaId = moradorEditado.residencia_id,
                     MoradorId = moradorEditado.id
                 });
 

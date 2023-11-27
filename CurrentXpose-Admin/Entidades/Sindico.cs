@@ -9,6 +9,7 @@ namespace CurrentXpose_Admin.Entidades
         public string login { get; set; }
         public string senha { get; set; }
         public Condominio condominio { get; set; }
+        public int condominio_id { get; set; }
         public Tipo_Relatorio nivel_relatorio { get; set; }
 
         public Sindico() { }

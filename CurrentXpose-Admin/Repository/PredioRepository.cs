@@ -44,7 +44,7 @@ namespace CurrentXpose_Admin.Repository
                 {
                     Nome = predio.nome,
                     TotalDeAndares = predio.total_de_andares,
-                    CondominioId = predio.condominio.id
+                    CondominioId = predio.condominio_id
                 });
 
                 conn.Close();
@@ -67,7 +67,7 @@ namespace CurrentXpose_Admin.Repository
                 {
                     Nome = predio.nome,
                     TotalDeAndares = predio.total_de_andares,
-                    CondominioId = predio.condominio.id,
+                    CondominioId = predio.condominio_id,
                     PredioId = predio.id
                 });
 
